@@ -11,7 +11,7 @@ const Hero = () => {
       id='hero'
     >
       <div className='flex flex-col md:flex-row'>
-        <div className='animate__animated animate__fadeInLeft'>
+        <div className='animate__animated animate__fadeInLeft animate__delay-1s md:animate__delay-0s'>
           <Image
             src={ProfilePhoto}
             alt='Profile Photo not found'
