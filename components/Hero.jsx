@@ -45,7 +45,7 @@ const Hero = () => {
           <div className='flex flex-col md:flex-row md:justify-start mt-8 animate__animated animate__fadeInUp'>
             <button className='btn primaryBtn'>Download CV</button>
             <button className='btn secondaryBtn md:ml-4 mt-3 md:mt-0'>
-              <Link href={"/contact"}>Let's work together</Link>
+              <Link href={"/contact"}>Let&apos;s work together</Link>
             </button>
           </div>
         </div>

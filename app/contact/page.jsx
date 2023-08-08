@@ -62,7 +62,7 @@ const ContactPage = () => {
           onSubmit={handleSubmit}
         >
           <h2 className='text-2xl text-primaryColor font-semibold mb-4 animate__animated animate__fadeInDown'>
-            Let's connect. Leave a message
+            Let&apos;s connect. Leave a message
           </h2>
           <div className='mb-4 animate__animated animate__fadeInLeft'>
             <label className='block text-sm font-medium'>Name</label>
