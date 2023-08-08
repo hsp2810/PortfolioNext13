@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main_container {
+  min-height: 80vh;
+}
+
+.btn {
+  outline: none;
+  padding: 1rem;
+  /* margin-left: 1rem; */
+  border-radius: 0.75rem;
+  transition: 0.2s all ease-in-out !important;
+}
+
+.btn:hover {
+  transform: translateY(-3px) !important;
+}
+
+.primaryBtn {
+  border: 1px solid rgb(247 161 2);
+  color: rgb(255, 166, 0);
+}
+
+.secondaryBtn {
+  border: 1px solid rgb(101, 101, 174);
+  color: rgb(101, 101, 174);
+}
