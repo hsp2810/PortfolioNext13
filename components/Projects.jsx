@@ -19,15 +19,29 @@ export default function Projects() {
     }
   }, [projects]);
 
+  useEffect(() => {
+    const scrollToElement = () => {
+      const element = document.getElementById("caraousel");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    scrollToElement();
+  }, []);
+
   return (
     <div id='projects' className='projects_container mt-[7rem] '>
-      <h1 className='uppercase font-bold text-3xl text-center animate__animated animate__fadeIn'>
+      <h1 className='uppercase font-bold text-3xl  text-center animate__animated animate__fadeIn'>
         Projects
       </h1>
       {projects && (
         <div className='projects flex flex-col'>
           {/* For Desktop */}
-          <div className='hidden arrows md:flex justify-between items-start'>
+          <div
+            className='hidden arrows md:flex justify-between items-start '
+            id={"caraousel"}
+          >
             <Carousel
               renderArrowPrev={(onClickHandler, hasPrev, label) => (
                 <CustomLeftArrow onClick={onClickHandler} hasPrev={hasPrev} />
@@ -35,7 +49,7 @@ export default function Projects() {
               renderArrowNext={(onClickHandler, hasNext, label) => (
                 <CustomRightArrow onClick={onClickHandler} hasNext={hasNext} />
               )}
-              className='w-3/4 m-auto px-[12rem]'
+              className='w-full m-auto px-[12rem]'
               showArrows={true}
               showStatus={false}
               showIndicators={false}
