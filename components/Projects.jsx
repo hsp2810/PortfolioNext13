@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import "@styles/projects.css";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Carousel } from "react-responsive-carousel";
@@ -19,20 +18,9 @@ export default function Projects() {
     }
   }, [projects]);
 
-  useEffect(() => {
-    const scrollToElement = () => {
-      const element = document.getElementById("caraousel");
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    scrollToElement();
-  }, []);
-
   return (
-    <div id='projects' className='projects_container mt-[7rem] '>
-      <h1 className='uppercase font-bold text-3xl  text-center animate__animated animate__fadeIn'>
+    <div id='projects' className='mt-[7rem] '>
+      <h1 className='uppercase font-bold text-3xl text-center animate__animated animate__fadeIn'>
         Projects
       </h1>
       {projects && (
