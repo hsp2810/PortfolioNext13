@@ -43,7 +43,7 @@ const Hero = () => {
             with your web development needs.
           </div>
           <h1 className='font-bold text-xl my-4'>
-            "Passion for CS is not just a job, its a lifestyle"
+            &quot;Passion for CS isn't just a job - it's a lifestyle&quot;
           </h1>
           <div className='flex flex-col md:flex-row md:justify-start animate__animated animate__fadeInUp'>
             <a
