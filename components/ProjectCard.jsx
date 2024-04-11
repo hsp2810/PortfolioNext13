@@ -94,7 +94,7 @@ const ProjectCard = ({ project }) => {
               </a>
               <div className='absolute bottom-0 left-0 text-white p-5 transition-opacity duration-300 hover:opacity-100'>
                 <h1 className='flex items-center font-extrabold text-5xl text-left bg-gradient-to-r from-primaryColor to-blue-900 text-transparent bg-clip-text bg-no-repeat bg-cover w-fit'>
-                  {project.title}
+                  <span className='tracking-tighter'>{project.title}</span>
                   {project.isGoing && (
                     <span className='bg-white text-xs font-normal ml-1 text-black p-1 rounded-lg hover:bg-gray-200'>
                       ONGOING

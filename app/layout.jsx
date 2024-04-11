@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export const metadata = {
-  title: "Harshit Patel-Home",
+  title: "Harshit Patel",
   description:
     "I am a Full stack developer and I enjoy learning new frameworks and building web applications which can solve problems",
 };

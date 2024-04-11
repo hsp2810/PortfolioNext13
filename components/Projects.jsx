@@ -13,7 +13,7 @@ export default function Projects() {
   const [projectsArr, setProjectsArr] = useState(projects);
 
   useEffect(() => {
-    if (!projectsArr) {
+    if (projectsArr && projectsArr.length > 0) {
       setProjectsArr(projects);
     }
   }, [projects]);
