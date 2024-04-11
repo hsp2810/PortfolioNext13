@@ -42,8 +42,15 @@ const Hero = () => {
             of my recent projects and get in touch to discuss how I can help
             with your web development needs.
           </div>
-          <div className='flex flex-col md:flex-row md:justify-start mt-8 animate__animated animate__fadeInUp'>
-            <a href={"/resume.pdf"} download className='btn primaryBtn'>
+          <h1 className='font-bold text-xl my-4'>
+            "Passion for CS is not just a job, its a lifestyle"
+          </h1>
+          <div className='flex flex-col md:flex-row md:justify-start animate__animated animate__fadeInUp'>
+            <a
+              href={"/resume.pdf"}
+              download
+              className='btn primaryBtn text-center'
+            >
               Download CV
             </a>
             <button className='btn secondaryBtn md:ml-4 mt-3 md:mt-0'>

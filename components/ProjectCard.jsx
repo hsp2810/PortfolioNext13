@@ -8,17 +8,15 @@ const ProjectCard = ({ project }) => {
     setIsLoaded(true);
   };
 
-  // if (!isLoaded) return <div>Loading...</div>;
-
   return (
     <>
       {project && (
         <>
           {/* Phones */}
-          <div className='md:hidden rounded-2xl mt-6'>
+          <div className='md:hidden rounded-lg mt-6'>
             {project.photo ? (
               <img
-                className='rounded-2xl h-1/2 w-full'
+                className='rounded-lg h-1/2 w-full'
                 src={project.photo}
                 alt='Project card'
                 height={100}
@@ -29,23 +27,26 @@ const ProjectCard = ({ project }) => {
                 <video
                   ref={videoRef}
                   src={project.video}
-                  className='rounded-2xl w-full opacity-65'
+                  className='rounded-lg w-full opacity-65'
                   height={100}
                   width={100}
                   controls={true}
                 />
-                <div className='absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center'>
-                  <div className='bg-black bg-opacity-25 p-2 rounded-r-lg'>
-                    <PlayBtn videoRef={videoRef} />
-                    <PauseBtn videoRef={videoRef} />
-                  </div>
-                </div>
               </div>
             )}
             <div className='flex flex-col items-start py-4'>
               <div className='font-bold text-2xl mt-2 mb-2 text-primaryColor'>
-                <a href={project.githubUrl} target='_blank'>
-                  {project.title} {project.isGoing && ` - ONGOING`}
+                <a
+                  href={project.githubUrl}
+                  target='_blank'
+                  className='flex items-center gap-2'
+                >
+                  <span className='tracking-tighter'>{project.title}</span>
+                  {project.isGoing && (
+                    <span className='bg-white text-xs font-normal ml-1 text-black p-1 rounded-lg hover:bg-gray-200'>
+                      ONGOING
+                    </span>
+                  )}
                 </a>
               </div>
               <p className='text-base text-left'>{project.description}</p>

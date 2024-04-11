@@ -48,7 +48,7 @@ const ContactPage = () => {
   };
 
   return (
-    <div className='md:w-1/2 contact-page-container h-screen flex justify-center items-center'>
+    <div className='md:w-1/2 contact-page-container md:h-screen flex justify-center items-center'>
       {isSubmitted ? (
         <div className=''>
           <h1 className='text-2xl mb-2'>Form Submitted</h1>

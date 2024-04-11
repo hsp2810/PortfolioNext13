@@ -58,7 +58,7 @@ export default function Projects() {
           </div>
 
           {/* For Phones */}
-          <div className='md:hidden p-10'>
+          <div className='md:hidden px-5'>
             {projects &&
               projects.map((project, index) => {
                 return (
