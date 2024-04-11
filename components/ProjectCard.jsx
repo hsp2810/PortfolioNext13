@@ -24,14 +24,18 @@ const ProjectCard = ({ project }) => {
               />
             ) : (
               <div className='relative w-full'>
-                <video
-                  ref={videoRef}
-                  src={project.video}
-                  className='rounded-lg w-full opacity-65'
-                  height={100}
-                  width={100}
-                  controls={true}
-                />
+                {isLoaded ? (
+                  <video
+                    ref={videoRef}
+                    src={project.video}
+                    className='rounded-lg w-full opacity-65'
+                    height={100}
+                    width={100}
+                    controls={true}
+                  />
+                ) : (
+                  <h1>Loading the video</h1>
+                )}
               </div>
             )}
             <div className='flex flex-col items-start py-4'>
@@ -65,16 +69,19 @@ const ProjectCard = ({ project }) => {
                   width={100}
                 />
               ) : (
-                <video
-                  ref={videoRef}
-                  src={project.video}
-                  className='rounded-2xl w-full opacity-65'
-                  height={100}
-                  width={100}
-                  controls={false}
-                  onLoadedData={handleVideoLoad}
-                  style={{ display: isLoaded ? "block" : "none" }}
-                />
+                <>
+                  {!isLoaded && <h1>Loading the video</h1>}
+                  <video
+                    ref={videoRef}
+                    src={project.video}
+                    className='rounded-2xl w-full opacity-65'
+                    height={100}
+                    width={100}
+                    controls={false}
+                    onLoadedData={handleVideoLoad}
+                    style={{ display: isLoaded ? "block" : "none" }}
+                  />
+                </>
               )}
             </div>
             <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-90 transition-opacity opacity-0 hover:opacity-100'>
@@ -99,7 +106,7 @@ const ProjectCard = ({ project }) => {
                 </p>
               </div>
             </div>
-            {project.video && (
+            {isLoaded && project.video && (
               <div className='absolute bottom-0 w-full p-2 rounded-r-lg'>
                 <PlayBtn videoRef={videoRef} />
                 <PauseBtn videoRef={videoRef} />
