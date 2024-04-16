@@ -1,6 +1,6 @@
-import Footer from "@components/Footer";
-import Navbar from "@components/Navbar";
-import "@styles/globals.css";
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "../styles/globals.css";
 import { Josefin_Sans } from "next/font/google";
 const inter = Josefin_Sans({ subsets: ["latin"] });
 import { ToastContainer, toast } from "react-toastify";
