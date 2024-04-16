@@ -22,7 +22,7 @@ const NavItem = ({ title, href }) => {
     <li className='nav_lists ml-6'>
       <Link
         href={href}
-        className='hover:bg-primaryColor cursor-pointer transition-all ease-in-out p-3 rounded-xl'
+        className='hover:text-primaryColor hover:shadow-2xl cursor-pointer transition ease-in-out p-3 rounded-xl'
       >
         {title}
       </Link>

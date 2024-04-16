@@ -1,8 +1,19 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 const ProjectCard = ({ project }) => {
   const videoRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const { current } = videoRef;
+      if (!current.paused) {
+        current.pause();
+      }
+      current.currentTime = 0;
+      current.play();
+    }
+  }, [videoRef]);
 
   const handleVideoLoad = () => {
     setIsLoaded(true);
@@ -78,6 +89,7 @@ const ProjectCard = ({ project }) => {
                     height={100}
                     width={100}
                     controls={false}
+                    autoPlay={false}
                     onLoadedData={handleVideoLoad}
                     style={{ display: isLoaded ? "block" : "none" }}
                   />
@@ -124,7 +136,11 @@ export default ProjectCard;
 const PlayBtn = ({ videoRef }) => {
   return (
     <button
-      onClick={() => videoRef.current.play()}
+      onClick={() => {
+        console.log("Playing the video");
+        console.log(videoRef.current);
+        videoRef.current.play();
+      }}
       className='rounded-full hover:bg-primaryColor hover:text-white p-2 transition'
     >
       <svg
