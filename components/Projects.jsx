@@ -7,7 +7,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import { Carousel } from "react-responsive-carousel";
 import "animate.css/animate.min.css";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { projects } from "@utils/data/projects";
+import { projects } from "../utils/data/projects";
 
 export default function Projects() {
   const [projectsArr, setProjectsArr] = useState(projects);
