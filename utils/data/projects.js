@@ -1,5 +1,14 @@
 export const projects = [
   {
+    title: "Video Streaming Application - Freelance Project",
+    description:
+      "Welcome to the ultimate guitar learning experience! Our video streaming platform offers top-tier courses, seamless authentication, and a sleek UI. Dive into lessons from industry pros, track your progress, and join a vibrant community of fellow enthusiasts. Elevate your skills with the latest tech stack join us today and take your guitar journey to new heights!",
+
+    githubUrl: "https://github.com/hsp2810/GuitarGuru",
+    hasDemo: "https://guitargurunext.netlify.app/",
+    photo: "/projects/guitarguru.png",
+  },
+  {
     title: "Social Media Application",
     description:
       "Introducing a dynamic social media platform where connections thrive! Our app empowers users to engage with others through seamless follow mechanisms, fostering both public and private interactions. Share your moments through posts and stories, while building meaningful connections through comments and interactions with like-minded individuals.",

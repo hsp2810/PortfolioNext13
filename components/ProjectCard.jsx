@@ -96,7 +96,7 @@ const ProjectCard = ({ project }) => {
                 </>
               )}
             </div>
-            <div className='absolute inset-0 flex items-center justify-center bg-black bg-opacity-90 transition-opacity opacity-0 hover:opacity-100'>
+            <div className='absolute gap-2 inset-0 flex items-center justify-center bg-black bg-opacity-90 transition-opacity opacity-0 hover:opacity-100'>
               <a
                 href={project.githubUrl}
                 target='_blank'
@@ -104,6 +104,16 @@ const ProjectCard = ({ project }) => {
               >
                 Go to GitHub
               </a>
+              {project.hasDemo && (
+                <a
+                  href={project.hasDemo}
+                  target='_blank'
+                  className='bg-white text-black py-2 px-4 rounded-lg hover:bg-gray-200'
+                >
+                  Launch Demo
+                </a>
+              )}
+
               <div className='absolute bottom-0 left-0 text-white p-5 transition-opacity duration-300 hover:opacity-100'>
                 <h1 className='flex items-center font-extrabold text-5xl text-left bg-gradient-to-r from-primaryColor to-blue-900 text-transparent bg-clip-text bg-no-repeat bg-cover w-fit'>
                   <span className='tracking-tighter'>{project.title}</span>
